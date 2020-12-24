@@ -14,11 +14,9 @@ setInterval(function () {
 // Register service worker to control making site work offline
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/pwa-examples/a2hs/sw.js")
-    .then(function () {
-      console.log("Service Worker Registered");
-    });
+  navigator.serviceWorker.register("/pwa-examples/sw.js").then(function () {
+    console.log("Service Worker Registered");
+  });
 }
 
 // Code to handle install prompt on desktop
